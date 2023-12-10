@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        Assignment 1 
+        function f1(res) {
+        
+        if (res.length <= 1) {
+            return res;
+        }
+        const lastFourChars = res.slice(-4);
+        const vandak = '#'.repeat(res.length - 4) + lastFourChars;
+
+        return vandak;
+        }
+        console.log(f1("4556364607935616")); 
+        console.log(f1("64607935616"));
+        console.log(f1("1"))
+        console.log(f1(""));
+        console.log(f1("Skippy"));
+        console.log(f1("Nananananananananananananananana Batman!"));
+
+        
+        //Assignment 2
+        function f1(req) {
+            const barer = req.split(' ');
+            const kpacBarer = new Set(barer);
+            const res = [...kpacBarer].join(' ');
+            return res;
+            }
+            const req = 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta';
+            const res = f1(req);
+            console.log(res); 
+    </script>
+</body>
+</html>
