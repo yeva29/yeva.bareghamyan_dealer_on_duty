@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Assignment 1: 
+        function study (student, res) {     
+            if (student === 1) {
+                return res;
+            }
+            while (res >= 0 &&  res % student !== 0) {
+                res-- 
+            }
+        return res;
+        }
+        console.log(study(3,11))
+        
+
+        //Assignment 2:
+       function f1(number) {
+            const numStr = number.toString();
+            for (let i = 0; i < numStr.length - 1; i++) {
+                if (parseInt(numStr[i]) >= parseInt(numStr[i + 1])) {
+                    return false; 
+                }
+            }
+
+            return true;
+        }
+        const number1 = 13478;
+        const number2 = 1336;
+        const number3 = 2879;
+
+        console.log(f1(number1));
+        console.log(f1(number2));
+        console.log(f1(number3));
+    </script>
+</body>
+</html>

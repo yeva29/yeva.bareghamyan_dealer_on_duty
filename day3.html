@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Assignment #1
+        function barer(str) {
+        const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        const result = [];
+        for (let i = 0; i < str.length; i++) {
+            const char = str[i];
+
+           const pos = alphabet.indexOf(char)+1
+           result.push(pos)
+
+        }
+        return result.join(' ');
+        }
+        console.log(barer("abcd"))
+
+
+        //Assignment #2
+        const array = ["rock", "paper", "scissors"];
+        const random = Math.floor(Math.random() *array.length)
+        const smt = array[random]
+        
+        function f1(str){
+            if(str == smt){
+                console.log('nichya')
+                return 
+            }
+
+            if((str === "rock" && smt === "scissors") ||
+             (str === "paper" && smt ===  "rock") ||
+             (str === "scissors" && smt === "paper") ){
+                console.log("Computer choice is rock, you win")
+            }else{
+                console.log('Computer choice is scissors, you lost')
+            }
+        }
+        f1("paper")
+        
+    </script>
+</body>
+</html>
